@@ -1,0 +1,103 @@
+.drawer {
+  background: #f9f9f9 !important;
+  overflow-y: scroll !important;
+  transition: all 0.5s ease;
+  padding: 1rem;
+  display: none;
+  flex: 1;
+}
+
+.drawer.visible {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.drawer::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.drawer > * {
+  width: 100%;
+}
+
+.image {
+  height: 40vh;
+  margin: 1rem 0;
+  margin-bottom: 0.3rem;
+  border-radius: 4px;
+}
+
+.user-actions,
+.product-info,
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+}
+
+.user-actions {
+  position: relative;
+  gap: 0.5rem;
+  justify-content: end;
+}
+
+.user-actions * {
+  cursor: pointer;
+}
+
+.drawer .product-info .title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.product-info .currency {
+  font-weight: bold;
+  color: blue;
+}
+
+.drawer .product-info .barcode {
+  font-weight: thin;
+  color: red;
+}
+
+.drawer > p,
+.drawer .price,
+.title,
+.barcode {
+  font-size: 0.8rem;
+}
+
+.btn-group {
+  margin-top: auto !important;
+}
+
+.btn-group > * {
+  flex-grow: 1;
+  border-radius: 3px !important;
+}
+
+.drawer > .user-actions > .info:hover::after {
+  content: 'Report to admin';
+  position: absolute;
+  top: 20px;
+  right: 0;
+  font-weight: 510;
+  font-size: 12px;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ant-collapse-item {
+  margin: 0 !important;
+}
+
+.ant-collapse-header {
+  padding-left: 0 !important;
+  font-size: 0.9rem;
+}
